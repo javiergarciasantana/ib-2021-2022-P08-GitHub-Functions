@@ -1,6 +1,6 @@
 # Práctica 8. Funciones. Repositorios de código. GitHub y git.
 
-# Factor de ponderación: 6
+# Factor de ponderación: 7
 
 ### Objetivos
 Los objetivos de esta práctica son que el alumnado:
@@ -53,7 +53,7 @@ Comience su trabajo con GitHub utilizando la cuenta que creó en la primera prá
 Acceda a su cuenta y siga 
 [estas instrucciones](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/create-a-repo)
 para crear un repositorio en su cuenta de GitHub.
-Elija `IB-2020-2021-Practica8-Funciones` como nombre para su repositorio (en lugar de `hello-world`).
+Elija `IB-2021-2022-Practica08-Funciones` como nombre para su repositorio (en lugar de `hello-world`).
 Haga que su repositorio sea privado.
 El repositorio que ha creado no contiene programas y apenas contendrá un fichero `README.md`.
 GitHub utiliza profusamente ficheros de texto con formato Markdown.
@@ -69,7 +69,7 @@ No es neceario que aprenda Markdown en esta asignatura, pero si tiene interés p
 puede servirle de introducción.
 [Este tutorial](https://guides.github.com/features/mastering-markdown/) es útil para un
 conocimiento más profundo y por último 
-[StackEdit](https://stackedit.io/) es un editor de Markdown con una interfaz web, que puede resultarle útil.
+[StackEdit](https://stackedit.io/) es un editor de Markdown con una interfaz web, que puede resultarle igualmente útil.
 
 Antes de comenzar a trabajar ahora con Git, añada la clave ssh de su máquina virtual Linux a su cuenta GitHub.
 Esta tarea es posible que la realizara en la primera práctica de la asignatura, pero en caso contrario ha de
@@ -90,17 +90,17 @@ Para ello, en su máquina virtual linux de la asignatura acceda al directorio en
 prácticas y ejecute los comandos:
 ```
 $ mkdir practica08-Funciones
-$ git clone git@github.com:username/IB-2020-2021-Practica8-Funciones.git practica08-Funciones
+$ git clone git@github.com:ULL-ESIT-IB-2021-2022/ib-2021-2022-P08-GitHub-Functions.git practica08-Funciones
 ```
-La dirección de su repositorio en GitHub (en el comando anterior es
-`git@github.com:username/IB-2020-2021-Practica8-Funciones.git`) ha de obtenerla (cópiela de allí) en su cuenta de GitHub tal como
+La dirección de su repositorio en GitHub 
+(en el comando anterior es `git@github.com:username/IB-2020-2021-Practica8-Funciones.git`) ha de obtenerla (cópiela de allí) en su cuenta de GitHub tal como
 se indica en las instrucciones anteriores.
 De las tres opciones disponibles (HTTPS, ssh, GitHub Cli) utilice la opción ssh.
 
 A continuación ya está todo listo para que acceda al directorio de trabajo de esta práctica (el directorio que
 en este documento se ha llamado `practica08-Funciones`) y desarrolle en él todos los ejercicios de esta
 práctica.
-Resulta recomendable que dentro de ese directorio cree subdirectorios para cada uno de los ejercicios.
+Dentro de ese directorio cree subdirectorios para cada uno de los ejercicios de la práctica.
 Ahora todo el trabajo ha de realizarlo de la forma habitual, editando sus programas con VSC dentro de ese
 directorio y realizando todas las pruebas que considere oportunas.
 Después de cada sesión de trabajo recuerde "subir" sus cambios a la nube de GitHub.
@@ -129,19 +129,20 @@ que se propone en este documento.
 * Recuerde que Jutge solo evalúa la corrección de su programa desde un punto de vista del funcionamiento.
 Su código ha de cumplir adicionalmente con los requisitos de modularidad, formato y estilo.
 
-1. []() X
-2. []() X
-3. []() X
-4. []() X
-5. []() X
-6. []() X
-7. []() X
-8. []() X
-9. []() X
-10. []() X
+1. [P62421](https://jutge.org/problems/P62421_en) Three words
+2. [P39308](https://jutge.org/problems/P39308) Divisors in order.
+3. [P48713](https://jutge.org/problems/P48713) Primality
+4. [P75149](https://jutge.org/problems/P75149) Looking for an 'a'
+5. [P59539](https://jutge.org/problems/P59539) Harmonig Numbers (I)
+6. [P58153](https://jutge.org/problems/P58153) Harmonic Numbers (II)
+7. [P89078](https://jutge.org/problems/P89078) First Position of even
+8. [P39225](https://jutge.org/problems/P39225) i-th (I)
+9. [P11916_en](https://jutge.org/problems/P11916_en) Approximation of e
+10. [P31111](https://jutge.org/problems/P31111) Parenthesis
 
 ### Referencias
+* [Tutorial de Git. Manual básico con ejemplos](https://www.diegocmartin.com/tutorial-git/)
+* [git - the simple guide](https://rogerdudler.github.io/git-guide/)
+* [Qué es Markdown, para qué sirve y cómo usarlo](https://www.genbeta.com/guia-de-inicio/que-es-markdown-para-que-sirve-y-como-usarlo)
 * [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
 * [Jutge web site](https://jutge.org/)
-* [Jutge information](https://docs.google.com/presentation/d/14UvZPw4OJvogp6afLeouOAODcBNo5JhgePBQfkiAkic/edit?usp=sharing)
-* [Jutge documentation](https://jutge.org/documentation)
