@@ -9,9 +9,6 @@ Los objetivos de esta práctica son que el alumnado:
 * Conozca el funcionamiento básico de las herramientas git y GitHub.
 
 ### Rúbrica de evaluacion de esta práctica
-En esta práctica y las siguientes ya no será admisible la presentación de un programa que, al margen de su funcionamiento,
-pudiera tener deficiencias en cuanto a reglas de estilo y formato. 
-Ante tal situación **la práctica se calificará como suspendida**.
 Todo el código que se presente a evaluación ha de cumplir los estándares definidos en la 
 [Guía de Estilo de Google para C++](https://google.github.io/styleguide/cppguide.html).
 
@@ -20,11 +17,14 @@ El alumnado ha de acreditar que:
 
 * Conoce los conceptos expuestos en el material de referencia de esta práctica.
 * Ha realizado todos los ejercicios propuestos, así como que es capaz de desarrollar otros de complejidad similar.
+* El código que presenta para su evaluación está alojado en un repositorio privado de GitHub.
+* Dispone de una cuenta en la plataforma [Jutge](https://jutge.org/) y es capaz de auto-evaluar un programa en esa plataforma.
 * Sus programas se compilan correctamente utilizando la utilidad `make` y un fichero `Makefile`.
 * Todos los identificadores que utilice en su programa (constantes, variables, etc.) deberán ser
   siempre significativos. No utilice nunca identificadores de una única letra, tal vez con la excepción de las
   variables que utilice para iterar en un bucle.
-* Dispone de una cuenta en la plataforma [Jutge](https://jutge.org/) y es capaz de auto-evaluar un programa en esa plataforma.
+* Sabe editar y modificar sus programas usando VSC con una conexión remota a la máquina virtual Linux de la asignatura.
+* Ha realizado todos sus ejercicios en la Máquina Virtual Ubuntu de la asignatura.
 
 ### Introducción a Git y GitHub
 GitHub es un servicio en la nube con una interfaz web que ayuda a los desarrolladores a almacenar y administrar el código
@@ -137,7 +137,7 @@ Su código ha de cumplir adicionalmente con los requisitos de modularidad, forma
 6. [P58153](https://jutge.org/problems/P58153) Harmonic Numbers (II)
 7. [P89078](https://jutge.org/problems/P89078) First Position of even
 8. [P39225](https://jutge.org/problems/P39225) i-th (I)
-9. [P11916_en](https://jutge.org/problems/P11916_en) Approximation of e
+9. [P11916](https://jutge.org/problems/P11916_en) Approximation of e
 10. [P31111](https://jutge.org/problems/P31111) Parenthesis
 
 ### Referencias
