@@ -18,18 +18,12 @@ using namespace std;
 /*
   This function outputs the n-th harmonic number
 */
-double HarmonicNumber(const int kInput_1, const int kInput_2) {
-  double result_1 = 0.0;
-  double result_2 = 0.0;
-  double result_total;
-  for (double i = 1; i <= kInput_1; ++i) {
-    result_1 += 1 / i;
-    if (i == kInput_2) {
-      result_2 = result_1;
-    }
+double HarmonicNumber(const int kInput) {
+  double result = 0.0;
+  for (double i = 1; i <= kInput; ++i) {
+    result += 1 / i;
   }
-  result_total = result_1 - result_2;
-  return result_total;
+  return result;
 }
 
 int main() {
@@ -37,7 +31,7 @@ int main() {
   while (cin >> input_1 >> input_2) {
     if (input_1 >= 0 && input_2 >= 0) {
       if (input_1 >= input_2) {
-        cout << fixed << setprecision(10) << HarmonicNumber(input_1, input_2) << endl;
+        cout << fixed << setprecision(10) << HarmonicNumber(input_1) - HarmonicNumber(input_2) << endl;
       } else {
         cerr << "End-of-file reached or I/O error" << endl;
       }
