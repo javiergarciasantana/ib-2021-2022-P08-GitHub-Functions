@@ -14,6 +14,9 @@
 
 using namespace std;
 
+/*
+This non return function prints out the position of the first even number detected
+*/
 void FirstPosition() {
   int input;
   int counter = 0;
