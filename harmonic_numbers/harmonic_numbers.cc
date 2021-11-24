@@ -26,12 +26,16 @@ double HarmonicNumber(const int kInput) {
   return result;
 }
 
+double HarmonicSubtraction(const double kResult_1, const double kResult_2) {
+  return kResult_1 - kResult_2;
+}
+
 int main() {
   int input_1, input_2;
   while (cin >> input_1 >> input_2) {
     if (input_1 >= 0 && input_2 >= 0) {
       if (input_1 >= input_2) {
-        cout << fixed << setprecision(10) << HarmonicNumber(input_1) - HarmonicNumber(input_2) << endl;
+        cout << fixed << setprecision(10) << HarmonicSubtraction(HarmonicNumber(input_1), HarmonicNumber(input_2)) << endl;
       } else {
         cerr << "End-of-file reached or I/O error" << endl;
       }
