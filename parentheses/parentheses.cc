@@ -7,7 +7,7 @@
  * @author Javier Garcia Santana || alu0101391663@ull.edu.es
  * @date Nov 22 2021
  * @brief The program checks wether the parentheses inserted are properly closed
- * @see https://github.com/ULL-ESIT-IB-2021-2022/ib-2021-2022-P06-Statements/blob/master/Statements.md
+ * @see https://github.com/ULL-ESIT-IB-2021-2022/ib-2021-2022-P08-GitHub-Functions/blob/main/Functions-GitHub.md
  */
 
 #include <iostream>
@@ -19,7 +19,7 @@ using namespace std;
   This function determines if all of the inserted parentheses are properly closed 
   returning a string on either case
 */
-string ProperlyClosed (const string input) {
+string ProperlyClosed (const string &input) {
   const string kYes{"yes"};
   const string kNo{"no"};
   const string kError{"End-of-file reached or I/O error"};

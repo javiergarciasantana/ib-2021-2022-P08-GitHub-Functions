@@ -7,7 +7,7 @@
  * @author Javier Garcia Santana || alu0101391663@ull.edu.es
  * @date Nov 20 2021
  * @brief The program prints the n succession of harmonic numbers
- * @see https://github.com/ULL-ESIT-IB-2021-2022/ib-2021-2022-P06-Statements/blob/master/Statements.md
+ * @see https://github.com/ULL-ESIT-IB-2021-2022/ib-2021-2022-P08-GitHub-Functions/blob/main/Functions-GitHub.md
  */
 
 #include <iostream>
@@ -15,6 +15,9 @@
 
 using namespace std;
 
+/*
+  This function outputs the n-th harmonic number
+*/
 double HarmonicNumber(const int kInput) {
   double result = 0.0;
   for (double i = 1; i <= kInput; ++i) {

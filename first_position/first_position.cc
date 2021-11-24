@@ -7,7 +7,7 @@
  * @author Javier Garcia Santana || alu0101391663@ull.edu.es
  * @date Nov 19 2021
  * @brief The program prints the position of the first even number detected in a given chain of integer valuees
- * @see https://github.com/ULL-ESIT-IB-2021-2022/ib-2021-2022-P06-Statements/blob/master/Statements.md
+ * @see https://github.com/ULL-ESIT-IB-2021-2022/ib-2021-2022-P08-GitHub-Functions/blob/main/Functions-GitHub.md
  */
 
 #include <iostream>

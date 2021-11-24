@@ -7,12 +7,15 @@
  * @author Javier Garcia Santana || alu0101391663@ull.edu.es
  * @date Nov 19 2021
  * @brief The program prints the chosen i-th position of an inserted chain
- * @see https://github.com/ULL-ESIT-IB-2021-2022/ib-2021-2022-P06-Statements/blob/master/Statements.md
+ * @see https://github.com/ULL-ESIT-IB-2021-2022/ib-2021-2022-P08-GitHub-Functions/blob/main/Functions-GitHub.md
  */
 #include <iostream>
 
 using namespace std;
 
+/*
+This non-return function prints the n_th position of a chain of integer numbers
+*/
 void IthPosition(const int kPosition) {
   int input;
   int counter = 0;

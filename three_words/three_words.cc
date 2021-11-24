@@ -7,7 +7,7 @@
  * @author Javier Garcia Santana || alu0101391663@ull.edu.es
  * @date Nov 18 2021
  * @brief The program changes the order of the inserted three words to c b a, when the intital order was a b c
- * @see https://github.com/ULL-ESIT-IB-2021-2022/ib-2021-2022-P06-Statements/blob/master/Statements.md
+ * @see https://github.com/ULL-ESIT-IB-2021-2022/ib-2021-2022-P08-GitHub-Functions/blob/main/Functions-GitHub.md
  */
 
 #include <iostream>
@@ -16,7 +16,10 @@
 
 using namespace std;
 
-int SpaceCount(const string input){
+/*
+This function checks the number of spaces on a given string
+*/
+int SpaceCount(const string &input){
   int counter = 0;
   for (int i = 0; i < input.size(); ++i) {
     if (input[i] == ' ') {
@@ -25,6 +28,10 @@ int SpaceCount(const string input){
   }
   return counter;
 }
+
+/*
+This function saves the position of every space from a given string in a vector
+*/
 vector<int> SpacePosition(const string input) {
   vector<int> counter;
   for (int i = 0; i < input.size(); ++i) {
@@ -35,6 +42,10 @@ vector<int> SpacePosition(const string input) {
   return counter;
 }
 
+/*
+This non-return function changes the order of words in a string based on were the spaces are
+It goes from "a b c" to "c b a"
+*/
 void PrintString(const string input, vector<int> position) {
   for (int i = position[1] + 1; i < input.size(); ++i) {
     cout << input[i]; 

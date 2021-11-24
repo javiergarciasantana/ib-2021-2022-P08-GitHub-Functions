@@ -7,11 +7,12 @@
  * @author Javier Garcia Santana || alu0101391663@ull.edu.es
  * @date Nov 19 2021
  * @brief The program prints the result of subtracting two harmonic number successions
- * @see https://github.com/ULL-ESIT-IB-2021-2022/ib-2021-2022-P06-Statements/blob/master/Statements.md
+ * @see https://github.com/ULL-ESIT-IB-2021-2022/ib-2021-2022-P08-GitHub-Functions/blob/main/Functions-GitHub.md
  */
 
 #include <iostream>
 #include <iomanip>
+#include <cmath>
 
 using namespace std;
 
@@ -20,14 +21,10 @@ using namespace std;
 */
 double HarmonicNumber(const int kInput) {
   double result = 0.0;
-  for (double i = 1; i <= kInput; ++i) {
+  for (double i = 1; i <= sqrt(kInput); ++i) {
     result += 1 / i;
   }
   return result;
-}
-
-double HarmonicSubtraction(const double kResult_1, const double kResult_2) {
-  return kResult_1 - kResult_2;
 }
 
 int main() {
@@ -35,7 +32,7 @@ int main() {
   while (cin >> input_1 >> input_2) {
     if (input_1 >= 0 && input_2 >= 0) {
       if (input_1 >= input_2) {
-        cout << fixed << setprecision(10) << HarmonicSubtraction(HarmonicNumber(input_1), HarmonicNumber(input_2)) << endl;
+        cout << fixed << setprecision(10) << HarmonicNumber(input_1) - HarmonicNumber(input_2) << endl;
       } else {
         cerr << "End-of-file reached or I/O error" << endl;
       }

@@ -7,7 +7,7 @@
  * @author Javier Garcia Santana || alu0101391663@ull.edu.es
  * @date Nov 19 2021
  * @brief The program prints the Divisors of an inserted number
- * @see https://github.com/ULL-ESIT-IB-2021-2022/ib-2021-2022-P06-Statements/blob/master/Statements.md
+ * @see https://github.com/ULL-ESIT-IB-2021-2022/ib-2021-2022-P08-GitHub-Functions/blob/main/Functions-GitHub.md
  */
 
 #include <iostream>
@@ -21,11 +21,15 @@ using namespace std;
 */
 void DivisorsOfNumber(const int kNumber) {
   cout << "divisors of " << kNumber << ": ";
-  double sqrt_of_number = sqrt(kNumber);
-  for (int i = 1; i <= kNumber; ++i) {
-      if (kNumber % i == 0) {
-        cout << i << " ";
-      }
+  for (int i = 1; i < sqrt(kNumber); ++i) {
+    if (kNumber % i == 0) {
+      cout << i << " ";
+    }
+  }
+  for (int i = sqrt(kNumber); i <= kNumber; ++i) {
+    if (kNumber % i == 0) {
+      cout << i << " ";
+    }
   }
   cout << endl;
 }
@@ -39,6 +43,5 @@ int main(){
       cerr << "End-of-file reached or I/O error" << endl;
     }
   }
-  
   return 0;
 }

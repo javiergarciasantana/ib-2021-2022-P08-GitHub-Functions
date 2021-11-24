@@ -7,14 +7,13 @@
  * @author Javier Garcia Santana || alu0101391663@ull.edu.es
  * @date Nov 23 2021
  * @brief The program checks value by value if the inserted numbers are prime or not
- * @see https://github.com/ULL-ESIT-IB-2021-2022/ib-2021-2022-P06-Statements/blob/master/Statements.md
+ * @see https://github.com/ULL-ESIT-IB-2021-2022/ib-2021-2022-P08-GitHub-Functions/blob/main/Functions-GitHub.md
  */
 
 #include <iostream>
 #include <cmath>
 
 using namespace std;
-
 
 /*
   This function determines if a number is prime or not, returning false or 
@@ -25,7 +24,7 @@ bool IsPrime(const int kNumber) {
   if (kNumber <= 1) {
     return false;
   }
-  for (int i = 2; i < kNumber; i++) {
+  for (int i = 2; i < sqrt(kNumber); i++) {
     if (kNumber % i == 0) {
       return false;
     }
@@ -36,29 +35,21 @@ bool IsPrime(const int kNumber) {
   return true;
 }
 
-/*
-  This non-return function prints different strings wether the value in the vector is true or false
-*/
-void PrintResult(const int kNumber, const bool kResult) {
-  if (kResult == true) {
-    cout << kNumber << " is prime";
-  } else {
-    cout << kNumber << " is not prime";
-  }
-  cout << endl;
-}
-
 int main() {
   int numbers_size, number;
   cin >> numbers_size;
   if (numbers_size >= 0) {
     for (int i = 1; i <= numbers_size; i++) {
       cin >> number;
-      PrintResult(number, IsPrime(number));
+      if (IsPrime(number)) {
+        cout << number << " is prime";
+      } else {
+        cout << number << " is not prime";
+      }
+      cout << endl;
     }
   } else {
     cerr << "End-of-file reached or I/O error" << endl;
   }
-
   return 0;
 }
