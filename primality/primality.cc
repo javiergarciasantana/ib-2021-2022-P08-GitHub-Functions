@@ -11,67 +11,54 @@
  */
 
 #include <iostream>
-#include <vector>
+#include <cmath>
 
 using namespace std;
 
 
 /*
   This function determines if a number is prime or not, returning false or 
-  true inside of a vector for every value
+  true for every value
 */
-vector<bool> Isprime(const vector<int> kInputs) {
-  vector<bool> result;
-  bool loop_result;
-  for (int i = 0; i < kInputs.size(); ++i) {
-    if(kInputs[i] <= 1) {
-      loop_result = false;
-    } else {
-      for (int j = 2; j < kInputs[i]; ++j) {
-        if (kInputs[i] % j == 0) {
-	        loop_result = false; 
-          break;
-        } else {
-          loop_result = true;
-        }
-      }
+bool IsPrime(const int kNumber) {
+  int number_of_divisors = 0;
+  if (kNumber <= 1) {
+    return false;
+  }
+  for (int i = 2; i < kNumber; i++) {
+    if (kNumber % i == 0) {
+      return false;
     }
-    result.emplace_back(loop_result);
-  } 
-  return result;
+  }
+  if (number_of_divisors == 2) {
+    return false;
+  }
+  return true;
 }
 
 /*
   This non-return function prints different strings wether the value in the vector is true or false
 */
-void PrintResult(vector<bool> result, vector<int> inputs) {
-  for (int i = 0; i < result.size(); ++i) {
-    if (result[i] == true) {
-    cout << inputs[i] << " is prime" << endl;
-    }
-    if (result[i] == false) {
-    cout << inputs[i] << " is not prime" << endl;
-    }
+void PrintResult(const int kNumber, const bool kResult) {
+  if (kResult == true) {
+    cout << kNumber << " is prime";
+  } else {
+    cout << kNumber << " is not prime";
   }
   cout << endl;
 }
 
 int main() {
-  int number_of_inputs, input;
-  cin >> number_of_inputs;
-  if (number_of_inputs >= 0) {
-    int counter = 1;
-    vector<int> inputs;
-    while (counter <= number_of_inputs) {
-      cin >> input;
-      inputs.emplace_back(input);
-      ++counter;
+  int numbers_size, number;
+  cin >> numbers_size;
+  if (numbers_size >= 0) {
+    for (int i = 1; i <= numbers_size; i++) {
+      cin >> number;
+      PrintResult(number, IsPrime(number));
     }
-  vector<bool> result;
-  result = Isprime(inputs);
-  PrintResult(result,inputs);
   } else {
     cerr << "End-of-file reached or I/O error" << endl;
   }
+
   return 0;
 }
