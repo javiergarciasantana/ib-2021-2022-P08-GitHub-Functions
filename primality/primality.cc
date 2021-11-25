@@ -20,17 +20,16 @@ using namespace std;
   true for every value
 */
 bool IsPrime(const int kNumber) {
-  int number_of_divisors = 0;
-  if (kNumber <= 1) {
+  if (kNumber <= 1)
     return false;
-  }
-  for (int i = 2; i < sqrt(kNumber); i++) {
-    if (kNumber % i == 0) {
+  if (kNumber <= 3)
+    return true;
+  if (kNumber % 2 == 0 || kNumber % 3 == 0)
+    return false;
+  for (int i = 5; i * i <= kNumber; i = i + 6) {
+    if (kNumber % i == 0 || kNumber % (i + 2) == 0) {
       return false;
     }
-  }
-  if (number_of_divisors == 2) {
-    return false;
   }
   return true;
 }
