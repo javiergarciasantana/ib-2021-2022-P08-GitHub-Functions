@@ -20,7 +20,7 @@ This function calculates the factorial of a given number
 */
 double Factorial (const double kInput) {
   double factorial = 1.0;
-  for (double i = 1; i <= kInput; ++i) {
+  for (unsigned i = 1; i <= kInput; ++i) {
     factorial *= i; 
   }
   return factorial;
