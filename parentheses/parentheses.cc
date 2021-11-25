@@ -21,25 +21,20 @@ using namespace std;
 */
 string ProperlyClosed (const string &input) {
   const string kYes{"yes"};
-  const string kNo{"no"};
-  const string kError{"End-of-file reached or I/O error"};
-  int counter_open = 0;
-  int counter_close = 0;
+  const string kNo{"no"}; 
+  int counter= 0;
   for (int i = 0; i < input.size(); ++i) {
     if (input[i] == '(') {
-      ++counter_open;
+      ++counter;
     }
     if (input[i] == ')') {
-      ++counter_close;
+      --counter;
     }
-    if (input[0] == ')' || input[input.size()-1] == '(') {
+    if (counter < 0) {
       return kNo;
     }
   }
-  if (counter_open == counter_close) {
-    if (counter_open == 0) {
-      return kError;
-    }
+  if (counter == 0) {
     return kYes;
   }
   return kNo;
