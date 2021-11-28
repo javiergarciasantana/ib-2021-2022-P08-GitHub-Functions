@@ -20,27 +20,19 @@ using namespace std;
   it does so by comparing every character of the string to its equivalent when reading it backwards
 */
 bool IsPalindrome(const string& kInput){
-  int counter = 0;
-  int size = kInput.size() - 1;
-  if (kInput.size() >= 50) {
-    for (int i = size; i = size - 3; --i) {
-      if (kInput[i] == kInput[size - i]) {
-        ++counter;
-      }
+  int flag = 0;
+  int size = kInput.size();
+  for (int i = 0; i < size; i++) {
+    if (kInput[i] != kInput[size - i - 1]) {
+      flag = 1;
+      break;
     }
   }
-  if (counter == 3) {
-    return true;
+  if (flag) {
+    return false; 
+  } else {
+    return true; 
   }
-  for (int i = size; i >= 0; --i) {
-    if (kInput[i] == kInput[size - i]) {
-        ++counter;
-    }
-  }
-  if(counter == kInput.size()){
-    return true;
-  }
-  return false;
 }
 
 int main() {
